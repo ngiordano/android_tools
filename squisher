@@ -111,9 +111,9 @@ rm -rf $REPACK/ota/recovery
 
 # Determine what to name the new signed package
 if [ -z "$CND_NIGHTLY" ]; then
-	MODVERSION=`sed -n -e'/ro\.modversion/s/^.*CodenameDroid-//p' $REPACK/ota/system/build.prop`
+	MODVERSION=`sed -n -e'/ro\.modversion/s/^.*Codename-Android-//p' $REPACK/ota/system/build.prop`
 	: ${MODVERSION:=nightly}
-	OUTFILE=$OUT/CodenameDroid-$MODVERSION.zip
+	OUTFILE=$OUT/Codename-Android-$MODVERSION.zip
 else
 	OUTFILE=$OUT/update-squished.zip
 fi
